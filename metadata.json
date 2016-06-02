@@ -1,0 +1,15 @@
+{
+  "name": "bitswarmlabs/bsl_account",
+  "version": "0.1.0",
+  "author": "bitswarmlabs",
+  "summary": "Defining Bitswarm.io user/organizational accounts",
+  "license": "MIT",
+  "source": "https://github.com/bitswarmlabs/puppet-bsl_account",
+  "project_page": "http://bitswarm.io",
+  "issues_url": "http://bitswarm.io/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
