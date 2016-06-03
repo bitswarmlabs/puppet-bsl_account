@@ -31,7 +31,7 @@
 # Copyright 2016 Bitswarm Labs Inc
 #
 define bsl_account::verify(
-  $account_id,
+  $account_id = $name,
   $fail_if_not = false,
   $emerg_if_not = false,
 ) {
