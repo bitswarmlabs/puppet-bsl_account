@@ -32,6 +32,7 @@
 #
 define bsl_account::verify(
   $account_id = $name,
+  $tenant_id = undef,
   $fail_if_not = false,
   $emerg_if_not = false,
 ) {
@@ -41,7 +42,12 @@ define bsl_account::verify(
   $_failure_message = 'derp'
 
   if $_verified {
-    notify { "## bsl_account_id ${account_id} verified": }
+    if empty($tenant_id) {
+      notify { "## bsl_account_id ${account_id} verified (NOT TENANT)": }
+    }
+    else {
+      notify { "## bsl_account_id ${account_id} verified (TENANT)": }
+    }
   }
   else {
     $failure_message = "bsl_account_id ${account_id} invalid: ${_failure_message}"
