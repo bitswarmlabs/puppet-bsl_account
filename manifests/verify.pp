@@ -43,10 +43,10 @@ define bsl_account::verify(
 
   if $_verified {
     if empty($tenant_id) {
-      notify { "## bsl_account_id ${account_id} verified (NOT TENANT)": }
+      # notify { "## bsl_account_id ${account_id} verified (NOT TENANT)": }
     }
     else {
-      notify { "## bsl_account_id ${account_id} verified (TENANT)": }
+      # notify { "## bsl_account_id ${account_id} verified (TENANT)": }
     }
   }
   else {
